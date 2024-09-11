@@ -8,17 +8,27 @@ export const fetchUsers = createAsyncThunk("user/fetchUsers", async () => {
 });
 
 // *************************Add new User**************************
+// export const addUser = createAsyncThunk("user/addUser", async (values) => {
+//   return fetch("http://localhost:3030/users", {
+//     method: "POST",
+//     headers: { Accept: "application/json", "Content-Type": "application/json" },
+//     body: JSON.stringify({
+//       username: values.username,
+//       email: values.email,
+//       phone: values.phone,
+//       address: values.address,
+//     }),
+//   }).then((res) => res.json());
+// });
+
 export const addUser = createAsyncThunk("user/addUser", async (values) => {
-  return fetch("http://localhost:3030/users", {
-    method: "POST",
-    headers: { Accept: "application/json", "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username: values.username,
-      email: values.email,
-      phone: values.phone,
-      address: values.address,
-    }),
-  }).then((res) => res.json());
+  const response = await axios.post("http://localhost:3030/users", {
+    username: values.username,
+    email: values.email,
+    phone: values.phone,
+    address: values.address,
+  });
+  return response.data; // Return the newly added user data
 });
 
 // ************************************************************************
