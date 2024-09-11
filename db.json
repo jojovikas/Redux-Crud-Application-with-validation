@@ -69,6 +69,34 @@
       "email": "ravan007@gmail.com",
       "phone": "9587623984",
       "address": "lanka"
+    },
+    {
+      "id": "d69b",
+      "username": "Vikas",
+      "email": "v535784@gmail.com",
+      "phone": "7011719443",
+      "address": "V535784@gmail.com"
+    },
+    {
+      "id": "6294",
+      "username": "Vikas Kumar",
+      "email": "v535784@gmail.com",
+      "phone": "7011719443",
+      "address": "new address"
+    },
+    {
+      "id": "f209",
+      "username": "Vikas Kumar new",
+      "email": "v535784@gmail.com",
+      "phone": "7011719443",
+      "address": "new address"
+    },
+    {
+      "id": "27fc",
+      "username": "Vikas",
+      "email": "vikasfrontenddeveloper007@gmail.com",
+      "phone": "7011719443",
+      "address": "Kaushik Enclave"
     }
   ]
 }

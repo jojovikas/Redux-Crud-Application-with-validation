@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./user/userSlice";
 
-// all comment are remove
+// new code push to git hub
 export const store = configureStore({
   reducer: {
     user: userSlice,
