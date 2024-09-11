@@ -7,7 +7,7 @@ export const fetchUsers = createAsyncThunk("user/fetchUsers", async () => {
   return axios.get("http://localhost:3030/users").then((res) => res.data);
 });
 
-// Add new User
+// *************************Add new User**************************
 export const addUser = createAsyncThunk("user/addUser", async (values) => {
   return fetch("http://localhost:3030/users", {
     method: "POST",
@@ -38,31 +38,47 @@ export const addUser = createAsyncThunk("user/addUser", async (values) => {
 //   }
 // );
 
-// update user new
-// Update our User
+// ************ ***  UPDATE USER ***************
+
+// export const updateUser = createAsyncThunk(
+//   "user/updateUser",
+//   async ({ id, updatedData }) => {
+//     const response = await fetch(`http://localhost:3030/users/${id}`, {
+//       method: "PUT",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(updatedData),
+//     });
+//     const data = await response.json();
+//     console.log(data); // Log response to check the data
+//     return data;
+//   }
+// );
+
 export const updateUser = createAsyncThunk(
   "user/updateUser",
   async ({ id, updatedData }) => {
-    const response = await fetch(`http://localhost:3030/users/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedData),
-    });
-    const data = await response.json();
-    console.log(data); // Log response to check the data
-    return data;
+    const response = await axios.put(
+      `http://localhost:3030/users/${id}`,
+      updatedData
+    );
+    return response.data; // Return the updated user data
   }
 );
 
 // ************************************************************************
 
 // Delete user
+// export const deleteUser = createAsyncThunk("user/deleteUser", async (id) => {
+//   const response = await fetch(`http://localhost:3030/users/${id}`, {
+//     method: "DELETE",
+//   });
+//   return id; // Return the ID to remove it from the state
+// });
+
 export const deleteUser = createAsyncThunk("user/deleteUser", async (id) => {
-  const response = await fetch(`http://localhost:3030/users/${id}`, {
-    method: "DELETE",
-  });
+  await axios.delete(`http://localhost:3030/users/${id}`);
   return id; // Return the ID to remove it from the state
 });
 

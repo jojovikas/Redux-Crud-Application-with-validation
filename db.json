@@ -1,31 +1,10 @@
 {
   "users": [
     {
-      "id": "2151",
-      "username": "rahulfgdgf",
-      "email": "rahulkumar007@gmail.com",
-      "phone": "7011719443",
-      "address": "nagloi delhi"
-    },
-    {
-      "id": "31ad",
-      "username": "Vikas",
-      "email": "kumar",
-      "phone": "9876543321",
-      "address": "Sec 26 "
-    },
-    {
-      "id": "b24b",
-      "username": "Vikas",
-      "email": "vikaskumar007@gmail.com",
-      "phone": "98756412568",
-      "address": "new dlehi railway staiton"
-    },
-    {
       "id": "feff",
-      "username": "pawan",
-      "email": "vikasfrontenddeveloper007@gmail.com",
-      "phone": "07011719443",
+      "username": "pawan kumar",
+      "email": "vikasfrontenddeveloper007@gmail.comffff",
+      "phone": "7011719443",
       "address": "Kaushik Enclave"
     },
     {
@@ -62,6 +41,20 @@
       "email": "new007@gmail.com",
       "phone": "9868635282",
       "address": "buari"
+    },
+    {
+      "id": "ab50",
+      "username": "Vikas",
+      "email": "vikasfrontenddeveloper007@gmail.com",
+      "phone": "7011719443",
+      "address": "Kaushik Enclave"
+    },
+    {
+      "id": "f7cf",
+      "username": "Vikas",
+      "email": "vikaskumar007@gmail.com",
+      "phone": "7011719443",
+      "address": "Vikaskumar007@gmail.com"
     }
   ]
 }

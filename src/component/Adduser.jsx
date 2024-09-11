@@ -3,39 +3,39 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "../app/user/userSlice";
 
-// const Adduser = () => {
-//   const [inputValue, setInputValue] = useState({
-//     username: "",
-//     email: "",
-//     phone: "",
-//     address: "",
-//   });
-
-//   const navigate = useNavigate();
-//   const dispatch = useDispatch();
-//   const { isSuccess } = useSelector((state) => state.user);
-
-//   const handleInput = (e) => {
-//     setInputValue({ ...inputValue, [e.target.name]: e.target.value });
-//   };
-
-//   let vusername = document.forms["myForm"]["username"].value;
-//   let vphone = document.forms["myForm"]["phone"].value;
-
-//   const phonePattern = /^[0-9]{10}$/;
-//   if (!phonePattern.test(inputValue.phone)) {
-//     newErrors.phone = "Phone number must be 10 digits";
-//     isValid = false;
-//   }
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     dispatch(addUser(inputValue));
-//     alert("Data Send Succesfully");
-//     navigate("/userlist");
-//   };
-
 const Adduser = () => {
+  //   const [inputValue, setInputValue] = useState({
+  //     username: "",
+  //     email: "",
+  //     phone: "",
+  //     address: "",
+  //   });
+
+  //   const navigate = useNavigate();
+  //   const dispatch = useDispatch();
+  //   const { isSuccess } = useSelector((state) => state.user);
+
+  //   const handleInput = (e) => {
+  //     setInputValue({ ...inputValue, [e.target.name]: e.target.value });
+  //   };
+
+  //   let vusername = document.forms["myForm"]["username"].value;
+  //   let vphone = document.forms["myForm"]["phone"].value;
+
+  //   const phonePattern = /^[0-9]{10}$/;
+  //   if (!phonePattern.test(inputValue.phone)) {
+  //     newErrors.phone = "Phone number must be 10 digits";
+  //     isValid = false;
+  //   }
+
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     dispatch(addUser(inputValue));
+  //     alert("Data Send Succesfully");
+  //     navigate("/userlist");
+  //   };
+
+  // const Adduser = () => {
   const [inputValue, setInputValue] = useState({
     username: "",
     email: "",
@@ -43,6 +43,7 @@ const Adduser = () => {
     address: "",
   });
 
+  // Handling Error Facing when we are Validate our Form
   const [errors, setErrors] = useState({
     username: "",
     email: "",
@@ -58,11 +59,16 @@ const Adduser = () => {
     setInputValue({ ...inputValue, [e.target.name]: e.target.value });
   };
 
+  // Start Form Validation Logic here
   const validateForm = () => {
     const newErrors = {};
     let isValid = true;
 
     // Validate username
+    if (!inputValue.username) {
+      newErrors.username = "Email is Required";
+      isValid = false;
+    }
     if (!inputValue.username.trim()) {
       newErrors.username = "Username is required";
       isValid = false;
@@ -71,7 +77,7 @@ const Adduser = () => {
       newErrors.username = "Username is to long";
       isValid = false;
     }
-    if (inputValue.username.length < 7) {
+    if (inputValue.username.length > 0 && inputValue.username.length < 4) {
       newErrors.username = "Username is to small";
       isValid = false;
     }
@@ -83,7 +89,7 @@ const Adduser = () => {
       isValid = false;
     }
     if (inputValue.email == "") {
-      newErrors.email = "fill email";
+      newErrors.email = "Email is Required";
     }
 
     // Validate phone number (must be 10 digits)
@@ -92,6 +98,9 @@ const Adduser = () => {
       newErrors.phone = "Phone number must be 10 digits";
       isValid = false;
     }
+    if (!inputValue.phone) {
+      newErrors.phone = "Phone No. is Required";
+    }
 
     // Validate address
     if (!inputValue.address.trim()) {
@@ -99,6 +108,7 @@ const Adduser = () => {
       isValid = false;
     }
 
+    console.log(newErrors);
     setErrors(newErrors);
     return isValid;
   };
@@ -138,7 +148,12 @@ const Adduser = () => {
                     onChange={handleInput}
                   />
                   {errors.username && (
-                    <span className="text-danger">{errors.username}</span>
+                    <span
+                      className="text-danger"
+                      style={{ fontSize: "18px", float: "left" }}
+                    >
+                      {errors.username}
+                    </span>
                   )}
                 </div>
               </div>
@@ -155,7 +170,12 @@ const Adduser = () => {
                     onChange={handleInput}
                   />
                   {errors.email && (
-                    <span className="text-danger">{errors.email}</span>
+                    <span
+                      className="text-danger"
+                      style={{ fontSize: "18px", float: "left" }}
+                    >
+                      {errors.email}
+                    </span>
                   )}
                 </div>
               </div>
@@ -172,7 +192,12 @@ const Adduser = () => {
                     onChange={handleInput}
                   />
                   {errors.phone && (
-                    <span className="text-danger">{errors.phone}</span>
+                    <span
+                      className="text-danger"
+                      style={{ fontSize: "18px", float: "left" }}
+                    >
+                      {errors.phone}
+                    </span>
                   )}
                 </div>
               </div>
@@ -189,7 +214,12 @@ const Adduser = () => {
                     onChange={handleInput}
                   />
                   {errors.address && (
-                    <span className="text-danger">{errors.address}</span>
+                    <span
+                      className="text-danger"
+                      style={{ fontSize: "18px", float: "left" }}
+                    >
+                      {errors.address}
+                    </span>
                   )}
                 </div>
               </div>
