@@ -4,43 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { addUser } from "../app/user/userSlice";
 
 const Adduser = () => {
-  //   const [inputValue, setInputValue] = useState({
-  //     username: "",
-  //     email: "",
-  //     phone: "",
-  //     address: "",
-  //   });
+  const [file, setFile] = useState("hello"); // State for file input
 
-  //   const navigate = useNavigate();
-  //   const dispatch = useDispatch();
-  //   const { isSuccess } = useSelector((state) => state.user);
-
-  //   const handleInput = (e) => {
-  //     setInputValue({ ...inputValue, [e.target.name]: e.target.value });
-  //   };
-
-  //   let vusername = document.forms["myForm"]["username"].value;
-  //   let vphone = document.forms["myForm"]["phone"].value;
-
-  //   const phonePattern = /^[0-9]{10}$/;
-  //   if (!phonePattern.test(inputValue.phone)) {
-  //     newErrors.phone = "Phone number must be 10 digits";
-  //     isValid = false;
-  //   }
-
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     dispatch(addUser(inputValue));
-  //     alert("Data Send Succesfully");
-  //     navigate("/userlist");
-  //   };
-
-  // const Adduser = () => {
   const [inputValue, setInputValue] = useState({
     username: "",
     email: "",
     phone: "",
     address: "",
+    userimg: "",
   });
 
   // Handling Error Facing when we are Validate our Form
@@ -55,6 +26,21 @@ const Adduser = () => {
   const dispatch = useDispatch();
   const { isSuccess } = useSelector((state) => state.user);
 
+  // const handleInput = (e) => {
+  //   const { name, value } = e.target;
+
+  //   if (name === "userimg") {
+  //     const selectedFile = e.target.files[0];
+  //     setInputValue({
+  //       ...inputValue,
+  //       userimg: "./src/assets/" + selectedFile.name,
+  //     });
+  //     console.log("./src/assets/" + selectedFile.name); // Log the file path
+  //   } else {
+  //     setInputValue({ ...inputValue, [name]: value });
+  //   }
+  // };
+
   const handleInput = (e) => {
     setInputValue({ ...inputValue, [e.target.name]: e.target.value });
   };
@@ -66,7 +52,7 @@ const Adduser = () => {
 
     // Validate username
     if (!inputValue.username) {
-      newErrors.username = "Email is Required";
+      newErrors.username = "Username is required";
       isValid = false;
     }
     if (!inputValue.username.trim()) {
@@ -125,6 +111,11 @@ const Adduser = () => {
         .catch((error) => {
           console.error("Failed to add user:", error);
         });
+    }
+    if (e.target.name === "userimg") {
+      const selectedFile = e.target.files[0];
+      console.log("./src/assets/" + selectedFile.name);
+      // "./src/assets/" + selectedFile.name;
     }
   };
 
@@ -211,6 +202,28 @@ const Adduser = () => {
                     name="address"
                     placeholder="Enter Address"
                     value={inputValue.address}
+                    onChange={handleInput}
+                  />
+                  {errors.address && (
+                    <span
+                      className="text-danger"
+                      style={{ fontSize: "18px", float: "left" }}
+                    >
+                      {errors.address}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Upload Image */}
+              <div className="row mb-3">
+                <label className="col-sm-3 col-form-lable"> User Image </label>
+                <div className="col-md-8">
+                  <input
+                    type="file"
+                    className="form-control"
+                    name="userimg"
+                    placeholder="Enter Address"
                     onChange={handleInput}
                   />
                   {errors.address && (

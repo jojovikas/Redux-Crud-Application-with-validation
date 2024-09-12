@@ -9,7 +9,7 @@ import UserList from "./component/UserList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Adduser from "./component/Adduser";
 import Edituser from "./component/Edituser";
-import SearchData from "./component/SearchData";
+import Demo from "./component/Demo";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,7 +23,7 @@ function App() {
           <Route path="/userlist" element={<UserList />} />
           <Route path="/adduser" element={<Adduser />} />
           <Route path="/edituser/:id" element={<Edituser />} />
-          <Route path="/search" element={<SearchData />} />
+          <Route path="/demo" element={<Demo />} />
         </Routes>
         <Footer />
       </BrowserRouter>

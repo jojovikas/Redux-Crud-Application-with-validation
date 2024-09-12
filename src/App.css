@@ -13,10 +13,19 @@
   font-weight: 700;
 }
 
+.adduser {
+  display: flex;
+    align-items: start;
+    width: 128px;
+    text-align: center;
+}
 
 
 
 
+.search {
+  /* background-color: #490e0e; */
+}
 
 
 /* #root {

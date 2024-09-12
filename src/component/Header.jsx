@@ -35,11 +35,11 @@ const Header = () => {
                   UserList
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/search">
                   Search Data
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
