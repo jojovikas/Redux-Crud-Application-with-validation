@@ -125,7 +125,7 @@ const userSlice = createSlice({
       state.error = action.error.message;
     });
 
-    //add user
+    //**************add user*********
     builder.addCase(addUser.pending, (state) => {
       state.loading = true;
       state.error = "";

@@ -63,13 +63,13 @@ const UserList = () => {
                           to={`/edituser/${getUser.id}`}
                           className="btn btn-primary "
                         >
-                          edit
+                          Edit
                         </Link>
                         <button
-                          className="btn btn-info ms-2"
+                          className="btn btn-danger ms-2"
                           onClick={() => handleDelete(getUser.id)}
                         >
-                          delete
+                          Delete
                         </button>
                       </td>
                     </tr>

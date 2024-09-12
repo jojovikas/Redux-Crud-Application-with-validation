@@ -1,3 +1,24 @@
+.navbar-brand {
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+
+  color: wheat;
+}
+
+.bg-info {
+  background-color: #333969 !important;
+  color: white;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;

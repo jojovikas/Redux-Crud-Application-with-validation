@@ -1,25 +1,11 @@
 {
   "users": [
     {
-      "id": "feff",
-      "username": "pawan kumar",
-      "email": "vikasfrontenddeveloper007@gmail.comffff",
-      "phone": "7011719443",
-      "address": "Kaushik Enclave"
-    },
-    {
-      "id": "3225",
-      "username": "Raja",
-      "email": "raja007@gmail.com",
-      "phone": "9856789456",
-      "address": "vikas@kumar"
-    },
-    {
       "id": "5847",
-      "username": "new Vikas ",
+      "username": "Vikas New",
       "email": "v535784@gmail.com",
       "phone": "7011719443",
-      "address": "NEW DELHi"
+      "address": "NEW DELHI"
     },
     {
       "id": "46eb",
@@ -36,67 +22,18 @@
       "address": "sonipat"
     },
     {
-      "id": "7b23",
-      "username": "New name",
-      "email": "new007@gmail.com",
-      "phone": "9868635282",
-      "address": "buari"
-    },
-    {
-      "id": "ab50",
-      "username": "Vikas",
-      "email": "vikasfrontenddeveloper007@gmail.com",
-      "phone": "7011719443",
-      "address": "Kaushik Enclave"
-    },
-    {
-      "id": "f7cf",
-      "username": "Vikas",
-      "email": "vikaskumar007@gmail.com",
-      "phone": "7011719443",
-      "address": "Vikaskumar007@gmail.com"
-    },
-    {
-      "id": "efbc",
-      "username": "try with live",
-      "email": "v535784@gmail.com",
-      "phone": "6895741236",
-      "address": "burari delhi update"
-    },
-    {
-      "id": "6ea9",
-      "username": "Ravan",
-      "email": "ravan007@gmail.com",
-      "phone": "9587623984",
-      "address": "lanka"
-    },
-    {
-      "id": "d69b",
-      "username": "Vikas",
+      "id": "6aa6",
+      "username": "Vikas kumar",
       "email": "v535784@gmail.com",
       "phone": "7011719443",
-      "address": "V535784@gmail.com"
+      "address": "Nodia sector 16"
     },
     {
-      "id": "6294",
-      "username": "Vikas Kumar",
+      "id": "f185",
+      "username": "new user1",
       "email": "v535784@gmail.com",
-      "phone": "7011719443",
-      "address": "new address"
-    },
-    {
-      "id": "f209",
-      "username": "Vikas Kumar new",
-      "email": "v535784@gmail.com",
-      "phone": "7011719443",
-      "address": "new address"
-    },
-    {
-      "id": "27fc",
-      "username": "Vikas",
-      "email": "vikasfrontenddeveloper007@gmail.com",
-      "phone": "7011719443",
-      "address": "Kaushik Enclave"
+      "phone": "9898785620",
+      "address": "new delhi railway1"
     }
   ]
 }
